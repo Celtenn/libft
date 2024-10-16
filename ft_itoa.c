@@ -1,54 +1,65 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/16 16:28:16 by idkahram          #+#    #+#             */
+/*   Updated: 2024/10/16 16:31:29 by idkahram         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include "libft.h"
 
-int	belirleme(long sayi, int *eksi)
+int	lenn(long number, int *negative)
 {
 	int	i;
-	int	cizgi;
+	int	les;
 
 	i = 0;
-	if (sayi < 0)
+	if (number < 0)
 	{
-		cizgi = 1;
-		sayi *= -1;
+		les = 1;
+		number *= -1;
 		i++;
 	}
-	if(sayi == 0)
+	if (number == 0)
 		i++;
-	while (sayi > 0)
+	while (number > 0)
 	{
-		sayi = sayi / 10;
+		number = number / 10;
 		i++;
 	}
-	*eksi = cizgi;
+	*negative = les;
 	return (i);
 }
 
 char	*ft_itoa(int n)
 {
-	int		fak;
+	int		tt;
 	int		k;
-	long	lah;
-	char	*dizis;
+	long	heh;
+	char	*result;
 
-	lah = n;
-	k = belirleme(lah, &fak);
-	dizis = (char *) malloc((k + 1) * sizeof(char));
-
-	if (!dizis)
+	heh = n;
+	k = lenn(heh, &tt);
+	result = (char *) malloc((k + 1) * sizeof(char));
+	if (!result)
 		return (NULL);
-	if (fak == 1)
+	if (tt == 1)
 	{
-		dizis[0] = '-';
-		lah *= -1;
+		result[0] = '-';
+		heh *= -1;
 	}
-	dizis[k] = '\0';
-	while (lah > 0)
+	result[k] = '\0';
+	while (heh > 0)
 	{
-		dizis[--k] = (lah % 10) + 48;
-		lah /= 10;
+		result[--k] = (heh % 10) + 48;
+		heh /= 10;
 	}
-	if(n == 0)
-		dizis[0] = '0';
-	return (dizis);
+	if (n == 0)
+		result[0] = '0';
+	return (result);
 }
