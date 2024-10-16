@@ -20,29 +20,29 @@ char *ft_strtrim(char const *s1, char const *set)
     int k = 0;
     int len = 0;
     char *dizi;
-    while(s1[k] != '\0')
-    {
-        if (!belirleme(set, s1[k]))
-            len++;
-        k++;
-    }
-    dizi = (char *)malloc(sizeof(char) * (len + 1));
-    k = 0;
+
     while(s1[i] != '\0')
     {
-        if (!belirleme(set, s1[k]))
-        {
-            dizi[i] = s1[k];
-            i++;
-        }
+        i++;
+    }
+    while (s1[len] && belirleme(set, s1[len]))
+    {
+        len++;
+    }
+    while (i > len && belirleme(set, s1[i-1]))
+    {
+        i--;
+    }
+    dizi = (char *)malloc(sizeof(char) * (i - len + 1));
+    if (!dizi)
+        return (NULL);
+    k = 0;
+    while(len < i)
+    {
+        dizi[k] = s1[len];
+        len++;
         k++;
     }
-    dizi[i] = '\0';
+    dizi[k] = '\0';
     return(dizi);
-}
-int main()
-{
-    char dest[] = "efendisiztaht";
-    char bul[] = "es";
-    printf("%s", ft_strtrim(dest, bul));
 }

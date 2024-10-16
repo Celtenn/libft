@@ -22,5 +22,6 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
         tey[i] = f(i,s[i]);
         i++;
     }
+    tey[i] = '\0';
     return(tey);
 }
