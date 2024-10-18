@@ -6,7 +6,7 @@
 #    By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/27 13:45:19 by omadali           #+#    #+#              #
-#    Updated: 2024/10/18 17:33:12 by idkahram         ###   ########.fr        #
+#    Updated: 2024/10/19 02:50:01 by idkahram         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = gcc
 
 AR = ar rcs
 
-FLAGS = -g -Wextra -Wall -Werror
+FLAGS = -Wextra -Wall -Werror
 
 SRCS =	ft_atoi.c \
 		ft_bzero.c \
