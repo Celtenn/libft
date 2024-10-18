@@ -1,7 +1,8 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include "libft.h"
+#include <stdio.h>
 
-int count_word(char const *s, char c)
+int countw(char const *s, char c)
 {
     int i;
     int wnumber;
@@ -26,14 +27,14 @@ int count_word(char const *s, char c)
     return (wnumber);
 }
 
-char    *creatw(char *daz, char const *s, int has, int tas)
+char    *creatw(char *daz, char const *s, int first_i, int last_i)
 {
     int i;
 
     i = 0;
-    while (i < tas)
+    while (i < last_i)
     {
-        daz[i] = s[has + i];
+        daz[i] = s[first_i + i];
         i++;
     }
     daz[i] = '\0';
@@ -44,8 +45,8 @@ char    **create_word(char **daza, char const *s, char c, int k_len)
 {
     int i;
     int k;
-    int p;
-    int t;
+    int w_len;
+    int first;
 
     i = 0;
     k = 0;
@@ -53,21 +54,31 @@ char    **create_word(char **daza, char const *s, char c, int k_len)
     {
         if (s[i] != c)
         {
-            p = 0;
-            t = i;
+            w_len = 0;
+            first = i;
             while (s[i] != c && s[i])
             {
-                p++;
+                w_len++;
                 i++;
             }
-            daza[k] = (char *)malloc(sizeof(char) * p + 1);
+            daza[k] = (char *)malloc(sizeof(char) * (w_len + 1));
             if (!daza[k])
+            {
+                while(k > -1)
+                {
+                    free(daza[k]);
+                    k--;
+                }
+                free(daza);
                 return(0);
-            creatw(daza[k], s, t, p);
+            }
+            creatw(daza[k], s, first, w_len);
             k++;
         }
-        i++;
+        else
+            i++;
     }
+    daza[k] = NULL;
     return(daza);
 }
 
@@ -78,32 +89,12 @@ char **ft_split(char const *s, char c)
     char **dizi;
 
     i = 0;
-    k_len = count_word(s, c);
-    dizi = (char **)malloc(sizeof(char *) * k_len + 1);
+    if (!s)
+        return(0);
+    k_len = countw(s, c);
+    dizi = (char **)malloc(sizeof(char *) * (k_len + 1));
     if (!dizi)
         return(0);
-    create_word(dizi, s, c, k_len);
+    dizi = create_word(dizi, s, c, k_len);
     return(dizi);
-}
-
-int main()
-{
-    char dizi[] = "ehemmiyet";
-    char **diziler;
-    int i = 0;
-
-    diziler = ft_split(dizi, 'e');
-
-    while (diziler[i])
-    {
-        printf("Kelime %d = %s\n", i + 1, diziler[i]);
-        i++;
-    }
-    i = 0;
-    while (diziler[i])
-    {
-        free(diziler[i]);
-        i++;
-    }
-    free(diziler);
 }
