@@ -6,7 +6,7 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 03:00:11 by idkahram          #+#    #+#             */
-/*   Updated: 2024/10/19 04:27:50 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/10/19 13:25:35 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,15 +104,15 @@ char	**ft_split(char const *s, char c)
 {
 	int		i;
 	int		k_len;
-	char	**dizi;
+	char	**str;
 
 	i = 0;
 	if (!s)
 		return (0);
 	k_len = countw(s, c);
-	dizi = (char **)malloc(sizeof(char *) * (k_len + 1));
-	if (!dizi)
+	str = (char **)malloc(sizeof(char *) * (k_len + 1));
+	if (!str)
 		return (0);
-	dizi = create_word(dizi, s, c, k_len);
-	return (dizi);
+	str = create_word(str, s, c, k_len);
+	return (str);
 }

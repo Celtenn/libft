@@ -6,18 +6,19 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 20:30:34 by idkahram          #+#    #+#             */
-/*   Updated: 2024/10/18 20:35:21 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/10/19 12:58:33 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
+#include <stddef.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	i;
 	size_t			k;
-	char			*dizi;
+	char			*str;
 
 	i = 0;
 	k = 0;
@@ -29,14 +30,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = 0;
 	else if ((ft_strlen(s) < len) || (ft_strlen(s) < start + len))
 		len = ft_strlen(s) - start;
-	dizi = (char *)malloc(sizeof(char) * (len + 1));
-	if (!dizi)
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (NULL);
 	while (k < len && s[i + k] != '\0')
 	{
-		dizi[k] = s[i + k];
+		str[k] = s[i + k];
 		k++;
 	}
-	dizi[k] = '\0';
-	return (dizi);
+	str[k] = '\0';
+	return (str);
 }

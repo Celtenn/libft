@@ -6,24 +6,12 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 18:09:57 by idkahram          #+#    #+#             */
-/*   Updated: 2024/10/16 18:11:38 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/10/19 12:08:38 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
-
-size_t	ft_strlen(const char *lo)
-{
-	int	i;
-
-	i = 0;
-	while (lo[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
