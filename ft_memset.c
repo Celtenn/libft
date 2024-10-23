@@ -6,11 +6,10 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:45:15 by idkahram          #+#    #+#             */
-/*   Updated: 2024/10/16 17:47:39 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/10/23 11:04:39 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stddef.h>
 
 void	*ft_memset(void *b, int c, size_t len)

@@ -6,13 +6,11 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 18:05:41 by idkahram          #+#    #+#             */
-/*   Updated: 2024/10/16 18:07:09 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/10/23 11:35:30 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
-#include <stddef.h>
 
 char	*ft_strdup(const char *s1)
 {

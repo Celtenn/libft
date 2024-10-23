@@ -6,11 +6,10 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 18:16:44 by idkahram          #+#    #+#             */
-/*   Updated: 2024/10/16 18:17:58 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/10/23 11:42:41 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

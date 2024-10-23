@@ -6,12 +6,11 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 03:00:11 by idkahram          #+#    #+#             */
-/*   Updated: 2024/10/19 13:25:35 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/10/23 11:48:37 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
 
 int	countw(char const *s, char c)
 {

@@ -6,11 +6,9 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:16:37 by idkahram          #+#    #+#             */
-/*   Updated: 2024/10/16 16:05:31 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/10/23 00:21:42 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	jaja(const char *hel, int *k)
 {

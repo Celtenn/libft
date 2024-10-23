@@ -6,12 +6,11 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 18:09:57 by idkahram          #+#    #+#             */
-/*   Updated: 2024/10/19 12:08:38 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/10/23 11:40:19 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

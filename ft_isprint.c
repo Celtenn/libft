@@ -6,11 +6,9 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 16:17:04 by idkahram          #+#    #+#             */
-/*   Updated: 2024/10/16 16:17:32 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/10/22 21:22:20 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {

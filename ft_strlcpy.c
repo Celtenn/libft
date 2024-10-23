@@ -6,11 +6,10 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 18:12:34 by idkahram          #+#    #+#             */
-/*   Updated: 2024/10/16 18:14:15 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/10/23 11:39:56 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stddef.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)

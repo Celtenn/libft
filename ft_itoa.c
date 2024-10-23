@@ -6,12 +6,11 @@
 /*   By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 16:28:16 by idkahram          #+#    #+#             */
-/*   Updated: 2024/10/16 16:31:29 by idkahram         ###   ########.fr       */
+/*   Updated: 2024/10/23 11:27:45 by idkahram         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
 
 int	lenn(long number, int *negative)
 {
