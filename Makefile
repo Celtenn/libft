@@ -6,7 +6,7 @@
 #    By: idkahram <idkahram@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/27 13:45:19 by omadali           #+#    #+#              #
-#    Updated: 2024/10/23 11:59:38 by idkahram         ###   ########.fr        #
+#    Updated: 2024/10/23 12:08:43 by idkahram         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,4 +70,4 @@ fclean: clean
 	@rm -f $(NAME)
 	@echo "NICE"
 re :fclean all
-.PHONY all clean fclean re
+.PHONY: all clean fclean re
